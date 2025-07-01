@@ -14,7 +14,7 @@ const Step4 = () => {
   const dispatch = useAppDispatch();
   const personalInfo = useAppSelector(selectPersonalInfo);
   const travelInfo = useAppSelector(selectTravelInfo);
-  const [submitApplication, { isLoading, isSuccess, isError, error }] = useSubmitVisaApplicationMutation();
+  const [submitApplication, { isLoading, isSuccess, isError }] = useSubmitVisaApplicationMutation();
   const [submitted, setSubmitted] = useState(false);
 
   const handleBack = () => {
@@ -26,7 +26,7 @@ const Step4 = () => {
       await submitApplication({ personalInfo, travelInfo }).unwrap();
       setSubmitted(true);
       dispatch(resetForm());
-    } catch (e) {
+    } catch {
       // Error handled by isError
     }
   };

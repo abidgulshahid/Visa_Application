@@ -36,6 +36,7 @@ export async function POST(request: NextRequest) {
       role: 'admin',
     });
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { password: _, ...adminWithoutPassword } = newAdmin;
     return NextResponse.json(adminWithoutPassword, { status: 201 });
   } catch (error) {

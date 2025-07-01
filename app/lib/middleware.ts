@@ -14,7 +14,7 @@ export async function authenticateUser(request: NextRequest) {
     }
     
     return { user, payload };
-  } catch (error) {
+  } catch {
     return null;
   }
 }

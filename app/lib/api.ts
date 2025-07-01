@@ -95,7 +95,7 @@ export const authApi = {
     return response.json();
   },
 
-  createAdmin: async (data: { email: string; password: string }): Promise<any> => {
+  createAdmin: async (data: { email: string; password: string }): Promise<User> => {
     const response = await fetch(`${API_BASE}users/admin`, {
       method: 'POST',
       headers: { 

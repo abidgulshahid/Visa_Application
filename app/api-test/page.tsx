@@ -5,8 +5,8 @@ import { useLogin, useRegister, useAuth, useApplications, useAdminApplications }
 
 export default function ApiTestPage() {
   const [activeTab, setActiveTab] = useState('auth');
-  const { login, logout, user: loginUser } = useLogin();
-  const { register, user: registerUser } = useRegister();
+  const { login, logout } = useLogin();
+  const { register } = useRegister();
   const { user, isAuthenticated, isAdmin } = useAuth();
   const { applications, submitApplication, isLoading: appsLoading } = useApplications();
   const { applications: adminApps, isLoading: adminAppsLoading } = useAdminApplications();
@@ -53,8 +53,12 @@ export default function ApiTestPage() {
         intendedDepartureDate: formData.intendedDepartureDate,
       });
       alert('Application submitted successfully!');
-    } catch (error: any) {
-      alert(error.message);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        alert(error.message);
+      } else {
+        alert('An unknown error occurred');
+      }
     }
   };
 
