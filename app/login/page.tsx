@@ -103,11 +103,7 @@ export default function LoginPage() {
             Sign up
           </a>
         </p>
-        <div className="p-3 text-xs text-gray-600 bg-gray-50 rounded">
-          <p><strong>Test Credentials:</strong></p>
-          <p>User: user@example.com / password123</p>
-          <p>Admin: admin@example.com / password123</p>
-        </div>
+     
       </div>
     </div>
   );
