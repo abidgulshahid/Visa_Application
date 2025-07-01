@@ -220,16 +220,16 @@ const AdminPage = () => {
                   <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-50">
                       <tr>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Applicant</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Passport</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nationality</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Visa Type</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Purpose</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Arrival</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Departure</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Change Status</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-800 uppercase tracking-wider">Applicant</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-800 uppercase tracking-wider">Passport</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-800 uppercase tracking-wider">Nationality</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-800 uppercase tracking-wider">Visa Type</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-800 uppercase tracking-wider">Purpose</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-800 uppercase tracking-wider">Arrival</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-800 uppercase tracking-wider">Departure</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-800 uppercase tracking-wider">Status</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-800 uppercase tracking-wider">Change Status</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-800 uppercase tracking-wider">Actions</th>
                       </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
@@ -243,18 +243,18 @@ const AdminPage = () => {
                                 ({app.personalInfo?.email || user?.email || "Unknown"})
                               </span>
                             </td>
-                            <td className="px-6 py-4 whitespace-nowrap">{app.personalInfo?.passportNumber}</td>
-                            <td className="px-6 py-4 whitespace-nowrap">{app.personalInfo?.nationality}</td>
-                            <td className="px-6 py-4 whitespace-nowrap">{app.travelInfo?.visaType || ""}</td>
-                            <td className="px-6 py-4 whitespace-nowrap">{app.travelInfo?.purpose || ""}</td>
-                            <td className="px-6 py-4 whitespace-nowrap">{app.travelInfo?.intendedArrivalDate ? new Date(app.travelInfo.intendedArrivalDate).toLocaleDateString() : ""}</td>
-                            <td className="px-6 py-4 whitespace-nowrap">{app.travelInfo?.intendedDepartureDate ? new Date(app.travelInfo.intendedDepartureDate).toLocaleDateString() : ""}</td>
-                            <td className="px-6 py-4 whitespace-nowrap font-bold capitalize">{app.status}</td>
+                            <td className="px-6 py-4 whitespace-nowrap text-gray-800">{app.personalInfo?.passportNumber}</td>
+                            <td className="px-6 py-4 whitespace-nowrap text-gray-800">{app.personalInfo?.nationality}</td>
+                            <td className="px-6 py-4 whitespace-nowrap text-gray-800">{app.travelInfo?.visaType || ""}</td>
+                            <td className="px-6 py-4 whitespace-nowrap text-gray-800">{app.travelInfo?.purpose || ""}</td>
+                            <td className="px-6 py-4 whitespace-nowrap text-gray-800">{app.travelInfo?.intendedArrivalDate ? new Date(app.travelInfo.intendedArrivalDate).toLocaleDateString() : ""}</td>
+                            <td className="px-6 py-4 whitespace-nowrap text-gray-800">{app.travelInfo?.intendedDepartureDate ? new Date(app.travelInfo.intendedDepartureDate).toLocaleDateString() : ""}</td>
+                            <td className="px-6 py-4 whitespace-nowrap font-bold capitalize text-gray-800">{app.status}</td>
                             <td className="px-6 py-4 whitespace-nowrap">
                               <select
                                 value={app.status}
                                 onChange={e => handleStatusChange(app._id, e.target.value as AdminApplication["status"])}
-                                className="border rounded px-2 py-1"
+                                className="border rounded px-2 py-1 text-gray-800"
                                 disabled={statusLoading === app._id}
                               >
                                 <option value="pending">Pending</option>
