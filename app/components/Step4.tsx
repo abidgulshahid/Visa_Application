@@ -35,7 +35,7 @@ const Step4 = () => {
     <div>
       <h2 className="text-xl font-semibold mb-4 text-gray-800">Step 4: Review and Submit</h2>
       <div className="mb-6">
-        <h3 className="text-lg font-semibold mb-2">Personal Information</h3>
+        <h3 className="text-lg font-semibold mb-2 text-gray-800">Personal Information</h3>
         <p><strong className="text-gray-900">Name:</strong> <span className="text-gray-900">{personalInfo.name}</span></p>
         <p><strong className="text-gray-900">Email:</strong> <span className="text-gray-900">{personalInfo.email}</span></p>
         <p><strong className="text-gray-900">Passport Number:</strong> <span className="text-gray-900">{personalInfo.passportNumber}</span></p>
@@ -47,7 +47,7 @@ const Step4 = () => {
         <p><strong className="text-gray-900">Address:</strong> <span className="text-gray-900">{personalInfo.address}</span></p>
       </div>
       <div className="mb-6">
-        <h3 className="text-lg font-semibold mb-2">Travel Information</h3>
+        <h3 className="text-lg font-semibold mb-2 text-gray-800">Travel Information</h3>
         <p><strong className="text-gray-900">Destination:</strong> <span className="text-gray-900">{travelInfo.destination}</span></p>
         <p><strong className="text-gray-900">Date:</strong> <span className="text-gray-900">{travelInfo.date}</span></p>
         <p><strong className="text-gray-900">Intended Arrival Date:</strong> <span className="text-gray-900">{travelInfo.intendedArrivalDate}</span></p>
