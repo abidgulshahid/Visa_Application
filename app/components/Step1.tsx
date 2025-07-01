@@ -36,10 +36,10 @@ const Step1 = () => {
 
   return (
     <div>
-      <h2 className="text-xl font-semibold mb-4">Step 1: Personal Information</h2>
+      <h2 className="text-xl font-semibold mb-4 text-gray-800">Step 1: Personal Information</h2>
       <div>
         <div className="mb-4">
-          <label htmlFor="name" className="block mb-2">
+          <label htmlFor="name" className="block mb-2 text-gray-900">
             Name
           </label>
           <input
@@ -49,11 +49,11 @@ const Step1 = () => {
             onChange={(e) =>
               dispatch(updatePersonalInfo({ ...personalInfo, name: e.target.value }))
             }
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border rounded text-gray-800"
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="email" className="block mb-2">
+          <label htmlFor="email" className="block mb-2 text-gray-900">
             Email
           </label>
           <input
@@ -69,14 +69,14 @@ const Step1 = () => {
                 setEmailError("");
               }
             }}
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border rounded text-gray-800"
           />
           {emailError && (
             <p className="text-red-500 text-sm mt-1">{emailError}</p>
           )}
         </div>
         <div className="mb-4">
-          <label htmlFor="passportNumber" className="block mb-2">
+          <label htmlFor="passportNumber" className="block mb-2 text-gray-900">
             Passport Number
           </label>
           <input
@@ -86,11 +86,11 @@ const Step1 = () => {
             onChange={(e) =>
               dispatch(updatePersonalInfo({ ...personalInfo, passportNumber: e.target.value }))
             }
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border rounded text-gray-800"
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="passportExpirationDate" className="block mb-2">
+          <label htmlFor="passportExpirationDate" className="block mb-2 text-gray-900">
             Passport Expiration Date
           </label>
           <input
@@ -100,11 +100,11 @@ const Step1 = () => {
             onChange={(e) =>
               dispatch(updatePersonalInfo({ ...personalInfo, passportExpirationDate: e.target.value }))
             }
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border rounded text-gray-800"
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="dateOfBirth" className="block mb-2">
+          <label htmlFor="dateOfBirth" className="block mb-2 text-gray-900">
             Date of Birth
           </label>
           <input
@@ -114,11 +114,11 @@ const Step1 = () => {
             onChange={(e) =>
               dispatch(updatePersonalInfo({ ...personalInfo, dateOfBirth: e.target.value }))
             }
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border rounded text-gray-800"
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="nationality" className="block mb-2">
+          <label htmlFor="nationality" className="block mb-2 text-gray-900">
             Nationality
           </label>
           <input
@@ -128,11 +128,11 @@ const Step1 = () => {
             onChange={(e) =>
               dispatch(updatePersonalInfo({ ...personalInfo, nationality: e.target.value }))
             }
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border rounded text-gray-800"
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="gender" className="block mb-2">
+          <label htmlFor="gender" className="block mb-2 text-gray-900">
             Gender
           </label>
           <input
@@ -142,11 +142,11 @@ const Step1 = () => {
             onChange={(e) =>
               dispatch(updatePersonalInfo({ ...personalInfo, gender: e.target.value }))
             }
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border rounded text-gray-800"
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="phoneNumber" className="block mb-2">
+          <label htmlFor="phoneNumber" className="block mb-2 text-gray-900">
             Phone Number
           </label>
           <input
@@ -156,11 +156,11 @@ const Step1 = () => {
             onChange={(e) =>
               dispatch(updatePersonalInfo({ ...personalInfo, phoneNumber: e.target.value }))
             }
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border rounded text-gray-800"
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="address" className="block mb-2">
+          <label htmlFor="address" className="block mb-2 text-gray-900">
             Address
           </label>
           <input
@@ -170,7 +170,7 @@ const Step1 = () => {
             onChange={(e) =>
               dispatch(updatePersonalInfo({ ...personalInfo, address: e.target.value }))
             }
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border rounded text-gray-800"
           />
         </div>
       </div>

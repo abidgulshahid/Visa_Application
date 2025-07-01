@@ -187,17 +187,17 @@ const AdminPage = () => {
                   <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-50">
                       <tr>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Role</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">Email</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">Role</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">ID</th>
                       </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
                       {(users as UserRow[] | undefined)?.map((user) => (
                         <tr key={user.id || user._id}>
-                          <td className="px-6 py-4 whitespace-nowrap">{user.email}</td>
-                          <td className="px-6 py-4 whitespace-nowrap capitalize">{user.role}</td>
-                          <td className="px-6 py-4 whitespace-nowrap">{user.id || user._id}</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-gray-900">{user.email}</td>
+                          <td className="px-6 py-4 whitespace-nowrap capitalize text-gray-900">{user.role}</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-gray-900">{user.id || user._id}</td>
                         </tr>
                       ))}
                     </tbody>

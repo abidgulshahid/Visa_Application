@@ -32,9 +32,9 @@ const Step3 = () => {
 
   return (
     <div>
-      <h2 className="text-xl font-semibold mb-4">Step 3: Additional Travel Details</h2>
+      <h2 className="text-xl font-semibold mb-4 text-gray-800">Step 3: Additional Travel Details</h2>
       <div className="mb-4">
-        <label htmlFor="purpose" className="block mb-2">
+        <label htmlFor="purpose" className="block mb-2 text-gray-900">
           Purpose
         </label>
         <input
@@ -44,11 +44,11 @@ const Step3 = () => {
           onChange={(e) =>
             dispatch(updateTravelInfo({ ...travelInfo, purpose: e.target.value }))
           }
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded text-gray-800"
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="travelCompanions" className="block mb-2">
+        <label htmlFor="travelCompanions" className="block mb-2 text-gray-900">
           Travel Companions (comma separated)
         </label>
         <input
@@ -58,11 +58,11 @@ const Step3 = () => {
           onChange={(e) =>
             dispatch(updateTravelInfo({ ...travelInfo, travelCompanions: e.target.value.split(",").map(s => s.trim()) }))
           }
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded text-gray-800"
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="travelDates" className="block mb-2">
+        <label htmlFor="travelDates" className="block mb-2 text-gray-900">
           Travel Dates (comma separated)
         </label>
         <input
@@ -72,11 +72,11 @@ const Step3 = () => {
           onChange={(e) =>
             dispatch(updateTravelInfo({ ...travelInfo, travelDates: e.target.value.split(",").map(s => s.trim()) }))
           }
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded text-gray-800"
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="travelDocuments" className="block mb-2">
+        <label htmlFor="travelDocuments" className="block mb-2 text-gray-900">
           Travel Documents (comma separated)
         </label>
         <input
@@ -86,11 +86,11 @@ const Step3 = () => {
           onChange={(e) =>
             dispatch(updateTravelInfo({ ...travelInfo, travelDocuments: e.target.value.split(",").map(s => s.trim()) }))
           }
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded text-gray-800"
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="travelBudget" className="block mb-2">
+        <label htmlFor="travelBudget" className="block mb-2 text-gray-900">
           Travel Budget
         </label>
         <input
@@ -100,11 +100,11 @@ const Step3 = () => {
           onChange={(e) =>
             dispatch(updateTravelInfo({ ...travelInfo, travelBudget: e.target.value }))
           }
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded text-gray-800"
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="travelInsurance" className="block mb-2">
+        <label htmlFor="travelInsurance" className="block mb-2 text-gray-900">
           Travel Insurance
         </label>
         <input
@@ -114,7 +114,7 @@ const Step3 = () => {
           onChange={(e) =>
             dispatch(updateTravelInfo({ ...travelInfo, travelInsurance: e.target.value }))
           }
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded text-gray-800"
         />
       </div>
       <div className="flex justify-between mt-6">

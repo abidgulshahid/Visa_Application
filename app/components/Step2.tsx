@@ -27,9 +27,9 @@ const Step2 = () => {
 
   return (
     <div>
-      <h2 className="text-xl font-semibold mb-4">Step 2: Travel Information</h2>
+      <h2 className="text-xl font-semibold mb-4 text-gray-800">Step 2: Travel Information</h2>
       <div className="mb-4">
-        <label htmlFor="destination" className="block mb-2">
+        <label htmlFor="destination" className="block mb-2 text-gray-900">
           Destination
         </label>
         <input
@@ -41,11 +41,11 @@ const Step2 = () => {
               updateTravelInfo({ ...travelInfo, destination: e.target.value })
             )
           }
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded text-gray-800"
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="date" className="block mb-2">
+        <label htmlFor="date" className="block mb-2 text-gray-900">
           Date
         </label>
         <input
@@ -55,11 +55,11 @@ const Step2 = () => {
           onChange={(e) =>
             dispatch(updateTravelInfo({ ...travelInfo, date: e.target.value }))
           }
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded text-gray-800"
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="intendedArrivalDate" className="block mb-2">
+        <label htmlFor="intendedArrivalDate" className="block mb-2 text-gray-900">
           Intended Arrival Date
         </label>
         <input
@@ -71,11 +71,11 @@ const Step2 = () => {
               updateTravelInfo({ ...travelInfo, intendedArrivalDate: e.target.value })
             )
           }
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded text-gray-800"
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="intendedDepartureDate" className="block mb-2">
+        <label htmlFor="intendedDepartureDate" className="block mb-2 text-gray-900">
           Intended Departure Date
         </label>
         <input
@@ -87,7 +87,7 @@ const Step2 = () => {
               updateTravelInfo({ ...travelInfo, intendedDepartureDate: e.target.value })
             )
           }
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded text-gray-800"
         />
       </div>
       <div className="flex justify-between mt-6">

@@ -14,7 +14,7 @@ const VisaStatus: React.FC<VisaStatusProps> = ({ application }) => {
       .map(([key, value]) => (
         <div key={key}>
           <p className="font-semibold">{key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}:</p>
-          <p>{Array.isArray(value) ? value.join(", ") : String(value)}</p>
+          <p className="text-gray-900">{Array.isArray(value) ? value.join(", ") : String(value)}</p>
         </div>
       ));
 
@@ -27,7 +27,7 @@ const VisaStatus: React.FC<VisaStatusProps> = ({ application }) => {
         <div>
           <p className="font-semibold">Status:</p>
           <p
-            className={`font-bold ${
+            className={`font-bold text-gray-900 ${
               status === "approved"
                 ? "text-green-500"
                 : status === "rejected"
@@ -41,7 +41,7 @@ const VisaStatus: React.FC<VisaStatusProps> = ({ application }) => {
         {typeof __v !== 'undefined' && (
           <div>
             <p className="font-semibold">Version:</p>
-            <p>{__v}</p>
+            <p className="text-gray-900">{__v}</p>
           </div>
         )}
       </div>

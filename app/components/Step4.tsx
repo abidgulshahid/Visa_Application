@@ -33,31 +33,31 @@ const Step4 = () => {
 
   return (
     <div>
-      <h2 className="text-xl font-semibold mb-4">Step 4: Review and Submit</h2>
+      <h2 className="text-xl font-semibold mb-4 text-gray-800">Step 4: Review and Submit</h2>
       <div className="mb-6">
         <h3 className="text-lg font-semibold mb-2">Personal Information</h3>
-        <p><strong>Name:</strong> {personalInfo.name}</p>
-        <p><strong>Email:</strong> {personalInfo.email}</p>
-        <p><strong>Passport Number:</strong> {personalInfo.passportNumber}</p>
-        <p><strong>Passport Expiration Date:</strong> {personalInfo.passportExpirationDate}</p>
-        <p><strong>Date of Birth:</strong> {personalInfo.dateOfBirth}</p>
-        <p><strong>Nationality:</strong> {personalInfo.nationality}</p>
-        <p><strong>Gender:</strong> {personalInfo.gender}</p>
-        <p><strong>Phone Number:</strong> {personalInfo.phoneNumber}</p>
-        <p><strong>Address:</strong> {personalInfo.address}</p>
+        <p><strong className="text-gray-900">Name:</strong> <span className="text-gray-900">{personalInfo.name}</span></p>
+        <p><strong className="text-gray-900">Email:</strong> <span className="text-gray-900">{personalInfo.email}</span></p>
+        <p><strong className="text-gray-900">Passport Number:</strong> <span className="text-gray-900">{personalInfo.passportNumber}</span></p>
+        <p><strong className="text-gray-900">Passport Expiration Date:</strong> <span className="text-gray-900">{personalInfo.passportExpirationDate}</span></p>
+        <p><strong className="text-gray-900">Date of Birth:</strong> <span className="text-gray-900">{personalInfo.dateOfBirth}</span></p>
+        <p><strong className="text-gray-900">Nationality:</strong> <span className="text-gray-900">{personalInfo.nationality}</span></p>
+        <p><strong className="text-gray-900">Gender:</strong> <span className="text-gray-900">{personalInfo.gender}</span></p>
+        <p><strong className="text-gray-900">Phone Number:</strong> <span className="text-gray-900">{personalInfo.phoneNumber}</span></p>
+        <p><strong className="text-gray-900">Address:</strong> <span className="text-gray-900">{personalInfo.address}</span></p>
       </div>
       <div className="mb-6">
         <h3 className="text-lg font-semibold mb-2">Travel Information</h3>
-        <p><strong>Destination:</strong> {travelInfo.destination}</p>
-        <p><strong>Date:</strong> {travelInfo.date}</p>
-        <p><strong>Intended Arrival Date:</strong> {travelInfo.intendedArrivalDate}</p>
-        <p><strong>Intended Departure Date:</strong> {travelInfo.intendedDepartureDate}</p>
-        <p><strong>Purpose:</strong> {travelInfo.purpose}</p>
-        <p><strong>Travel Companions:</strong> {travelInfo.travelCompanions && travelInfo.travelCompanions.join(", ")}</p>
-        <p><strong>Travel Dates:</strong> {travelInfo.travelDates && travelInfo.travelDates.join(", ")}</p>
-        <p><strong>Travel Documents:</strong> {travelInfo.travelDocuments && travelInfo.travelDocuments.join(", ")}</p>
-        <p><strong>Travel Budget:</strong> {travelInfo.travelBudget}</p>
-        <p><strong>Travel Insurance:</strong> {travelInfo.travelInsurance}</p>
+        <p><strong className="text-gray-900">Destination:</strong> <span className="text-gray-900">{travelInfo.destination}</span></p>
+        <p><strong className="text-gray-900">Date:</strong> <span className="text-gray-900">{travelInfo.date}</span></p>
+        <p><strong className="text-gray-900">Intended Arrival Date:</strong> <span className="text-gray-900">{travelInfo.intendedArrivalDate}</span></p>
+        <p><strong className="text-gray-900">Intended Departure Date:</strong> <span className="text-gray-900">{travelInfo.intendedDepartureDate}</span></p>
+        <p><strong className="text-gray-900">Purpose:</strong> <span className="text-gray-900">{travelInfo.purpose}</span></p>
+        <p><strong className="text-gray-900">Travel Companions:</strong> <span className="text-gray-900">{travelInfo.travelCompanions && travelInfo.travelCompanions.join(", ")}</span></p>
+        <p><strong className="text-gray-900">Travel Dates:</strong> <span className="text-gray-900">{travelInfo.travelDates && travelInfo.travelDates.join(", ")}</span></p>
+        <p><strong className="text-gray-900">Travel Documents:</strong> <span className="text-gray-900">{travelInfo.travelDocuments && travelInfo.travelDocuments.join(", ")}</span></p>
+        <p><strong className="text-gray-900">Travel Budget:</strong> <span className="text-gray-900">{travelInfo.travelBudget}</span></p>
+        <p><strong className="text-gray-900">Travel Insurance:</strong> <span className="text-gray-900">{travelInfo.travelInsurance}</span></p>
       </div>
       <div className="flex justify-between mt-6">
         <button
