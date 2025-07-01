@@ -4,7 +4,7 @@ import { VisaApplication, VisaForm } from "./visaSlice";
 export const visaApi = createApi({
   reducerPath: "visaApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3000",
+    baseUrl: process.env.NEXT_PUBLIC_API_BASE || "http://localhost:3000",
     prepareHeaders: (headers) => {
       const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
       if (token) {

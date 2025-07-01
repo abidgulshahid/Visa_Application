@@ -15,6 +15,21 @@ const Step3 = () => {
     dispatch(setStep(4));
   };
 
+  const isTravelInfoValid = () => {
+    return (
+      travelInfo.destination.trim() !== "" &&
+      travelInfo.date.trim() !== "" &&
+      travelInfo.intendedArrivalDate.trim() !== "" &&
+      travelInfo.intendedDepartureDate.trim() !== "" &&
+      travelInfo.purpose.trim() !== "" &&
+      Array.isArray(travelInfo.travelCompanions) && travelInfo.travelCompanions.length > 0 && travelInfo.travelCompanions.every(tc => tc.trim() !== "") &&
+      Array.isArray(travelInfo.travelDates) && travelInfo.travelDates.length > 0 && travelInfo.travelDates.every(td => td.trim() !== "") &&
+      Array.isArray(travelInfo.travelDocuments) && travelInfo.travelDocuments.length > 0 && travelInfo.travelDocuments.every(td => td.trim() !== "") &&
+      travelInfo.travelBudget.trim() !== "" &&
+      travelInfo.travelInsurance.trim() !== ""
+    );
+  };
+
   return (
     <div>
       <h2 className="text-xl font-semibold mb-4">Step 3: Additional Travel Details</h2>
@@ -112,6 +127,7 @@ const Step3 = () => {
         <button
           onClick={handleNext}
           className="w-1/2 ml-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+          disabled={!isTravelInfoValid()}
         >
           Continue to Step 4
         </button>

@@ -5,19 +5,30 @@ import {
   setStep,
   selectPersonalInfo,
   selectTravelInfo,
+  resetForm,
 } from "../lib/features/visaSlice";
+import { useSubmitVisaApplicationMutation } from "../lib/features/visaApi";
+import { useState } from "react";
 
 const Step4 = () => {
   const dispatch = useAppDispatch();
   const personalInfo = useAppSelector(selectPersonalInfo);
   const travelInfo = useAppSelector(selectTravelInfo);
+  const [submitApplication, { isLoading, isSuccess, isError, error }] = useSubmitVisaApplicationMutation();
+  const [submitted, setSubmitted] = useState(false);
 
   const handleBack = () => {
     dispatch(setStep(3));
   };
 
   const handleSubmit = async () => {
-    // Submit logic (move from Step3 if needed)
+    try {
+      await submitApplication({ personalInfo, travelInfo }).unwrap();
+      setSubmitted(true);
+      dispatch(resetForm());
+    } catch (e) {
+      // Error handled by isError
+    }
   };
 
   return (
@@ -52,16 +63,24 @@ const Step4 = () => {
         <button
           onClick={handleBack}
           className="w-1/2 mr-2 bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
+          disabled={isLoading}
         >
           Back to Step 3
         </button>
         <button
           onClick={handleSubmit}
           className="w-1/2 ml-2 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+          disabled={isLoading}
         >
-          Submit Application
+          {isLoading ? "Submitting..." : "Submit Application"}
         </button>
       </div>
+      {isSuccess && submitted && (
+        <div className="mt-4 text-green-600 font-semibold">Application submitted successfully!</div>
+      )}
+      {isError && (
+        <div className="mt-4 text-red-600 font-semibold">Submission failed. Please try again.</div>
+      )}
     </div>
   );
 };
