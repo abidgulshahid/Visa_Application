@@ -301,7 +301,7 @@ const AdminPage = () => {
                       <hr />
                       <div>
                         <h4 className="font-bold mb-2 text-gray-800">Personal Info</h4>
-                        <div className="grid grid-cols-2 gap-x-4 gap-y-1">
+                        <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-gray-800">
                           <div><span className="font-semibold text-gray-800">Name:</span> {viewApp.personalInfo?.name}</div>
                           <div><span className="font-semibold text-gray-800">Email:</span> {viewApp.personalInfo?.email}</div>
                           <div><span className="font-semibold text-gray-800">Passport #:</span> {viewApp.personalInfo?.passportNumber}</div>
@@ -316,7 +316,7 @@ const AdminPage = () => {
                       <hr />
                       <div>
                         <h4 className="font-bold mb-2 text-gray-800">Travel Info</h4>
-                        <div className="grid grid-cols-2 gap-x-4 gap-y-1">
+                        <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-gray-800">
                           <div><span className="font-semibold text-gray-800">Destination:</span> {viewApp.travelInfo?.destination}</div>
                           <div><span className="font-semibold text-gray-800">Travel Date:</span> {viewApp.travelInfo?.date ? new Date(viewApp.travelInfo.date).toLocaleDateString() : ""}</div>
                           <div><span className="font-semibold text-gray-800">Purpose:</span> {viewApp.travelInfo?.purpose}</div>
@@ -348,7 +348,7 @@ const AdminPage = () => {
                       type="email"
                       value={adminEmail}
                       onChange={e => setAdminEmail(e.target.value)}
-                      className="border rounded px-3 py-2 w-full"
+                      className="border rounded px-3 py-2 w-full text-gray-800"
                       required
                     />
                   </div>
@@ -358,7 +358,7 @@ const AdminPage = () => {
                       type="password"
                       value={adminPassword}
                       onChange={e => setAdminPassword(e.target.value)}
-                      className="border rounded px-3 py-2 w-full"
+                      className="border rounded px-3 py-2 w-full text-gray-800"
                       required
                     />
                   </div>
