@@ -89,7 +89,7 @@ const AdminPage = () => {
     setStatusLoading(appId);
     try {
       const res = await fetch(
-        `http://localhost:3000/admin/applications/${appId}/status`,
+        `${process.env.NEXT_PUBLIC_API_URL}/admin/applications/${appId}/status`,
         {
           method: "PATCH",
           headers: {
@@ -179,9 +179,9 @@ const AdminPage = () => {
             <section>
               <h1 className="text-3xl font-bold mb-6 text-gray-800">All Users</h1>
               {usersLoading ? (
-                <p>Loading users...</p>
+                <p className="text-gray-800">Loading users...</p>
               ) : usersError ? (
-                <p className="text-red-600">Failed to load users.</p>
+                <p className="text-red-600 text-gray-800">Failed to load users.</p>
               ) : (
                 <div className="overflow-x-auto rounded-lg shadow bg-white">
                   <table className="min-w-full divide-y divide-gray-200">
@@ -237,9 +237,9 @@ const AdminPage = () => {
                         const user = app.userId;
                         return (
                           <tr key={app._id}>
-                            <td className="px-6 py-4 whitespace-nowrap">
+                            <td className="px-6 py-4 whitespace-nowrap text-gray-800">
                               {app.personalInfo?.name}
-                              <span className="block text-xs text-gray-400">
+                              <span className="block text-xs text-gray-800">
                                 ({app.personalInfo?.email || user?.email || "Unknown"})
                               </span>
                             </td>
