@@ -13,7 +13,7 @@ A modern visa application management system built with Next.js, TypeScript, and 
 
 ## Tech Stack
 
-- **Frontend**: Next.js 15, React 19, TypeScript
+- **Frontend**: Next.js 15, React 19, TypeScript, SWR
 - **UI Components**: PrimeReact, PrimeIcons, PrimeFlex
 - **Styling**: Tailwind CSS
 - **State Management**: Redux Toolkit, SWR
