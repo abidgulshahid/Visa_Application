@@ -302,31 +302,31 @@ const AdminPage = () => {
                       <div>
                         <h4 className="font-bold mb-2">Personal Info</h4>
                         <div className="grid grid-cols-2 gap-x-4 gap-y-1">
-                          <div><span className="font-semibold">Name:</span> {viewApp.personalInfo?.name}</div>
-                          <div><span className="font-semibold">Email:</span> {viewApp.personalInfo?.email}</div>
-                          <div><span className="font-semibold">Passport #:</span> {viewApp.personalInfo?.passportNumber}</div>
-                          <div><span className="font-semibold">Passport Expiry:</span> {viewApp.personalInfo?.passportExpirationDate ? new Date(viewApp.personalInfo.passportExpirationDate).toLocaleDateString() : ""}</div>
-                          <div><span className="font-semibold">Date of Birth:</span> {viewApp.personalInfo?.dateOfBirth ? new Date(viewApp.personalInfo.dateOfBirth).toLocaleDateString() : ""}</div>
-                          <div><span className="font-semibold">Nationality:</span> {viewApp.personalInfo?.nationality}</div>
-                          <div><span className="font-semibold">Gender:</span> {viewApp.personalInfo?.gender}</div>
-                          <div><span className="font-semibold">Phone:</span> {viewApp.personalInfo?.phoneNumber}</div>
-                          <div className="col-span-2"><span className="font-semibold">Address:</span> {viewApp.personalInfo?.address}</div>
+                          <div><span className="font-semibold text-gray-800">Name:</span> {viewApp.personalInfo?.name}</div>
+                          <div><span className="font-semibold text-gray-800">Email:</span> {viewApp.personalInfo?.email}</div>
+                          <div><span className="font-semibold text-gray-800">Passport #:</span> {viewApp.personalInfo?.passportNumber}</div>
+                          <div><span className="font-semibold text-gray-800">Passport Expiry:</span> {viewApp.personalInfo?.passportExpirationDate ? new Date(viewApp.personalInfo.passportExpirationDate).toLocaleDateString() : ""}</div>
+                          <div><span className="font-semibold text-gray-800">Date of Birth:</span> {viewApp.personalInfo?.dateOfBirth ? new Date(viewApp.personalInfo.dateOfBirth).toLocaleDateString() : ""}</div>
+                          <div><span className="font-semibold text-gray-800">Nationality:</span> {viewApp.personalInfo?.nationality}</div>
+                          <div><span className="font-semibold text-gray-800">Gender:</span> {viewApp.personalInfo?.gender}</div>
+                          <div><span className="font-semibold text-gray-800">Phone:</span> {viewApp.personalInfo?.phoneNumber}</div>
+                          <div className="col-span-2 text-gray-800"><span className="font-semibold">Address:</span> {viewApp.personalInfo?.address}</div>
                         </div>
                       </div>
                       <hr />
                       <div>
                         <h4 className="font-bold mb-2">Travel Info</h4>
                         <div className="grid grid-cols-2 gap-x-4 gap-y-1">
-                          <div><span className="font-semibold">Destination:</span> {viewApp.travelInfo?.destination}</div>
-                          <div><span className="font-semibold">Travel Date:</span> {viewApp.travelInfo?.date ? new Date(viewApp.travelInfo.date).toLocaleDateString() : ""}</div>
-                          <div><span className="font-semibold">Purpose:</span> {viewApp.travelInfo?.purpose}</div>
-                          <div><span className="font-semibold">Arrival:</span> {viewApp.travelInfo?.intendedArrivalDate ? new Date(viewApp.travelInfo.intendedArrivalDate).toLocaleDateString() : ""}</div>
-                          <div><span className="font-semibold">Departure:</span> {viewApp.travelInfo?.intendedDepartureDate ? new Date(viewApp.travelInfo.intendedDepartureDate).toLocaleDateString() : ""}</div>
-                          <div><span className="font-semibold">Budget:</span> {viewApp.travelInfo?.travelBudget}</div>
-                          <div><span className="font-semibold">Insurance:</span> {viewApp.travelInfo?.travelInsurance}</div>
-                          <div className="col-span-2"><span className="font-semibold">Travel Companions:</span> {viewApp.travelInfo?.travelCompanions?.join(", ")}</div>
-                          <div className="col-span-2"><span className="font-semibold">Travel Dates:</span> {viewApp.travelInfo?.travelDates?.join(", ")}</div>
-                          <div className="col-span-2"><span className="font-semibold">Travel Documents:</span> {viewApp.travelInfo?.travelDocuments?.join(", ")}</div>
+                          <div><span className="font-semibold text-gray-800">Destination:</span> {viewApp.travelInfo?.destination}</div>
+                          <div><span className="font-semibold text-gray-800">Travel Date:</span> {viewApp.travelInfo?.date ? new Date(viewApp.travelInfo.date).toLocaleDateString() : ""}</div>
+                          <div><span className="font-semibold text-gray-800">Purpose:</span> {viewApp.travelInfo?.purpose}</div>
+                          <div><span className="font-semibold text-gray-800">Arrival:</span> {viewApp.travelInfo?.intendedArrivalDate ? new Date(viewApp.travelInfo.intendedArrivalDate).toLocaleDateString() : ""}</div>
+                          <div><span className="font-semibold text-gray-800">Departure:</span> {viewApp.travelInfo?.intendedDepartureDate ? new Date(viewApp.travelInfo.intendedDepartureDate).toLocaleDateString() : ""}</div>
+                          <div><span className="font-semibold text-gray-800">Budget:</span> {viewApp.travelInfo?.travelBudget}</div>
+                          <div><span className="font-semibold text-gray-800">Insurance:</span> {viewApp.travelInfo?.travelInsurance}</div>
+                          <div className="col-span-2"><span className="font-semibold text-gray-800">Travel Companions:</span> {viewApp.travelInfo?.travelCompanions?.join(", ")}</div>
+                          <div className="col-span-2"><span className="font-semibold text-gray-800">Travel Dates:</span> {viewApp.travelInfo?.travelDates?.join(", ")}</div>
+                          <div className="col-span-2"><span className="font-semibold text-gray-800">Travel Documents:</span> {viewApp.travelInfo?.travelDocuments?.join(", ")}</div>
                         </div>
                       </div>
                     </div>
@@ -343,7 +343,7 @@ const AdminPage = () => {
               <div className="bg-white rounded-lg shadow p-8 max-w-lg mx-auto">
                 <form onSubmit={handleCreateAdmin} className="space-y-6">
                   <div>
-                    <label className="block font-semibold mb-1">Email</label>
+                    <label className="block font-semibold mb-1 text-gray-800">Email</label>
                     <input
                       type="email"
                       value={adminEmail}
@@ -353,7 +353,7 @@ const AdminPage = () => {
                     />
                   </div>
                   <div>
-                    <label className="block font-semibold mb-1">Password</label>
+                    <label className="block font-semibold mb-1 text-gray-800">Password</label>
                     <input
                       type="password"
                       value={adminPassword}
