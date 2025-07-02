@@ -88,8 +88,9 @@ const AdminPage = () => {
   ) => {
     setStatusLoading(appId);
     try {
+      const API_BASE = process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:3001/';
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}admin/applications/${appId}/status`,
+        `${API_BASE}admin/applications/${appId}/status`,
         {
           method: "PATCH",
           headers: {
