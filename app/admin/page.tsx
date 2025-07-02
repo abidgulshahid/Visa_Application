@@ -290,17 +290,17 @@ const AdminPage = () => {
                     >
                       &times;
                     </button>
-                    <h3 className="text-xl font-bold mb-4">Application Details</h3>
+                    <h3 className="text-xl font-bold mb-4 text-gray-800">Application Details</h3>
                     <div className="space-y-4 text-sm">
                       <div>
-                        <span className="font-semibold">Application ID:</span> {viewApp._id}
+                        <span className="font-semibold text-gray-800">Application ID:</span> {viewApp._id}
                       </div>
                       <div>
-                        <span className="font-semibold">Status:</span> <span className="capitalize">{viewApp.status}</span>
+                        <span className="font-semibold text-gray-800">Status:</span> <span className="capitalize">{viewApp.status}</span>
                       </div>
                       <hr />
                       <div>
-                        <h4 className="font-bold mb-2">Personal Info</h4>
+                        <h4 className="font-bold mb-2 text-gray-800">Personal Info</h4>
                         <div className="grid grid-cols-2 gap-x-4 gap-y-1">
                           <div><span className="font-semibold text-gray-800">Name:</span> {viewApp.personalInfo?.name}</div>
                           <div><span className="font-semibold text-gray-800">Email:</span> {viewApp.personalInfo?.email}</div>
