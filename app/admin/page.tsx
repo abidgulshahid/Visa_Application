@@ -315,7 +315,7 @@ const AdminPage = () => {
                       </div>
                       <hr />
                       <div>
-                        <h4 className="font-bold mb-2">Travel Info</h4>
+                        <h4 className="font-bold mb-2 text-gray-800">Travel Info</h4>
                         <div className="grid grid-cols-2 gap-x-4 gap-y-1">
                           <div><span className="font-semibold text-gray-800">Destination:</span> {viewApp.travelInfo?.destination}</div>
                           <div><span className="font-semibold text-gray-800">Travel Date:</span> {viewApp.travelInfo?.date ? new Date(viewApp.travelInfo.date).toLocaleDateString() : ""}</div>
