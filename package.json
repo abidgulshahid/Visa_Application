@@ -17,7 +17,7 @@
     "cors": "^2.8.5",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.16.1",
-    "next": "15.3.4",
+    "next": "16.1.5",
     "primeflex": "^4.0.0",
     "primeicons": "^7.0.0",
     "primereact": "^10.9.6",
